@@ -23,6 +23,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
  FloatingActionButton floatingActionButton;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("My Notes");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("My Notes");
 
         floatingActionButton = findViewById(R.id.floatingActionButtonAdd);
 
